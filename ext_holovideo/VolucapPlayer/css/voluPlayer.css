@@ -1,0 +1,477 @@
+:root{
+    --paddings:5pt;
+    --border-radius: 10pt;
+
+    --panels-backgroundcolor:rgba(1, 1, 1, 0.7);
+    --preloader-backgroundcolor:rgba(256, 256, 256, 0.7);
+
+    --playerpanel-height: 50pt;
+    --playerpanel-paddings: 5pt;
+    --playerpanel-btn-size: calc(var(--playerpanel-height) - var(--playerpanel-paddings) * 3);
+
+    --materaialpanel-size: 40pt;
+    --materaialpanel-paddings: 5pt;
+    --materaialpanel-button-size: calc(var(--materaialpanel-size) - var(--materaialpanel-paddings) * 2);
+    --materaialpanel-height:calc(var(--materaialpanel-size) * 4);
+
+    --enviromentpanel-size: var(--materaialpanel-size);
+    --enviromentpanel-paddings: var(--materaialpanel-paddings);
+    --enviromentpanel-button-size: var(--materaialpanel-button-size);
+
+    --adjustpanelbutton-size: calc(var(--materaialpanel-size)*2);
+    --adjustpanelbutton-paddings: var(--materaialpanel-paddings);
+    --adjustpanelbutton-button-size: var(--materaialpanel-button-size);
+
+
+    --color-highlight: #4adbdb;
+}
+
+.volu-panel-btn{
+    cursor: pointer;
+}
+
+.voluplayer-container div,.voluplayer-container img{
+    position: absolute;
+}
+
+.volu-threejs-container {
+    width: 100%;
+    height: 100%;
+}
+
+/*----PLAYER SLIDER-----*/
+.volu-player-controls {
+    width: calc(100% - var(--paddings) * 2);
+    height: var(--playerpanel-height);
+    background-color: var(--panels-backgroundcolor);
+    border-radius: var(--border-radius);
+    bottom: var(--paddings);
+    left: var(--paddings);
+}
+
+.volu-player-controls-buttons , .volu-material-panel-buttons, .volu-env-panel-buttons,.volu-adjustpanel-buttons{
+
+    width: var(--playerpanel-btn-size);
+    height: var(--playerpanel-btn-size);
+    border-radius: var(--border-radius);
+    background-color: rgba(1, 1, 1, 0.5);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center center;
+    cursor:pointer;
+
+}
+
+
+.volu-btnbg{
+    cursor: pointer;
+}
+.volu-btnbg:hover{
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.volu-player-controls-buttons {
+    top: calc(var(--playerpanel-paddings)*2);
+}
+
+
+
+/*.player-controls-buttons:hover {
+
+}*/
+
+.volu-button-rewind {
+    left: var(--playerpanel-paddings);
+    background-image: url(../images/volucapplayer/btn_Prev_vid.svg);
+}
+
+.volu-button-play {
+    left: calc(var(--playerpanel-paddings) + var(--playerpanel-btn-size));
+    background-image: url(../images/volucapplayer/btn_Play.svg);
+}
+
+.volu-button-expand {
+    right: var(--playerpanel-paddings);
+    background-image: url(../images/volucapplayer/btn_Expand.svg);
+}
+
+.volu-button-share{
+    right: calc(var(--playerpanel-paddings)*2 + var(--playerpanel-btn-size));
+    background-image: url(../images/volucapplayer/btn_Sharing.svg);
+}
+
+.volu-button-open{
+    right: calc(var(--playerpanel-paddings)*3 + var(--playerpanel-btn-size)*2);
+    background-image: url(../images/volucapplayer/btn_Open.svg);
+}
+
+.volu-button-next {
+    right: var(--playerpanel-paddings);
+    background-image: url(../images/volucapplayer/btn_Next.svg);
+}
+
+.volu-player-file-info{
+    top: calc(var(--playerpanel-paddings)*2);
+    left: calc(var(--playerpanel-paddings)*2 + var(--playerpanel-btn-size)*2);;
+    width: calc(100% - var(--playerpanel-height) * 4 );
+    height: calc(var(--playerpanel-height) - var(--playerpanel-paddings) * 2);
+    border-radius: var(--border-radius);
+    color: white;
+    font-size: min(11pt,calc(1vw + 1vh));
+}
+
+.volu-time-line {
+    bottom: var(--playerpanel-paddings);
+    left: var(--playerpanel-paddings);
+    width: calc(100% - var(--playerpanel-paddings)*2);
+    height: calc(var(--playerpanel-height) - var(--playerpanel-paddings) * 2);
+    border-radius: var(--border-radius);
+}
+
+.volu-player-line {
+    width: 100%;
+    height: 2pt;
+    top: 0;
+
+    border-radius: var(--border-radius);
+}
+
+.volu-line-bg {
+    background-color: #555555;
+}
+
+.volu-line-loaded {
+    background-color: #888888;
+}
+
+.volu-line-progres {
+    background-color: var(--color-highlight);
+}
+
+
+
+.volu-player-slider {
+    height: 15pt;
+    width: 15pt;
+    border-radius: var(--border-radius);
+    background-color: #a0a0a0;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.volu-player-slider:hover {
+    background-color: #FFFFFF;
+}
+
+/*------------METARIAL PANEL--------*/
+.volu-materails-panel {
+    right: var(--paddings);
+    background-color: var(--panels-backgroundcolor);
+    bottom: calc(var( --playerpanel-height) + var(--paddings) * 3 + var(--adjustpanelbutton-size));
+    width: var(--materaialpanel-size);
+    height: var(--materaialpanel-height);
+
+    border-radius: var(--border-radius);
+}
+.volu-material-panel-buttons{
+    width: var( --materaialpanel-button-size);
+    height: var( --materaialpanel-button-size);
+}
+
+.volu-button-texture {
+    left: var(--paddings);
+    top: var(--paddings);
+    background-image: url(../images/volucapplayer/ball_texture.png);
+}
+
+.volu-button-shaded {
+    left: var(--paddings);
+    top: var(--paddings);
+    background-image: url(../images/volucapplayer/ball_texture_env.png);
+}
+
+.volu-button-mtl-solidshade {
+    left: var(--paddings);
+    top: calc(var(--materaialpanel-size) * 1);
+    background-image: url(../images/volucapplayer/ball_shaded.png);
+}
+
+.volu-button-normals {
+    left: var(--paddings);
+    top: calc(var(--materaialpanel-size) * 2);
+    background-image: url(../images/volucapplayer/ball_normal_map.png);
+}
+
+.volu-button-flat {
+    left: var(--paddings);
+    top: calc(var(--materaialpanel-size) * 3);
+    background-image: url(../images/volucapplayer/ball_white.png);
+}
+
+/*------------TOP PANEL----------*/
+
+.volu-top-panel {
+    width: calc(100% - var(--paddings) * 2);
+    height: 30pt;
+
+    border-radius: var(--border-radius);
+    top: var(--paddings);
+    left: var(--paddings);
+}
+
+.volu-top-logo {
+    position: absolute;
+    left: var(--playerpanel-paddings);
+    height: 100%;
+}
+
+/*------------PRELODER----------*/
+.volu-preloder {
+    width: 100%;
+    height: 100%;
+    background-color: var(--preloader-backgroundcolor);
+}
+
+.volu-preloder img {
+    width: 50pt;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/*--------ENV PANEL------------*/
+.volu-env-panel{
+    height: var(--enviromentpanel-size);
+    bottom: calc(var(--playerpanel-height) + var(--paddings) * 4 + var(--materaialpanel-height) + var(--adjustpanelbutton-size)) ;
+    right: var(--paddings);
+    background-color: var(--panels-backgroundcolor);
+    width: var(--enviromentpanel-size);
+    border-radius: var(--border-radius);
+}
+
+.volu-env-panel-buttons , .volu-adjustpanel-buttons{
+    width: var( --enviromentpanel-button-size);
+    height: var( --enviromentpanel-button-size);
+    top: var(--materaialpanel-paddings);
+    background-size: contain;
+}
+
+.volu-env-panel-buttons:hover{
+    filter: brightness(1.4);
+}
+
+
+.volu-btn-envpanel{
+
+    background-image: url(../images/env/icon-lamp.png);
+    right: var(--materaialpanel-paddings);
+}
+
+/*-----------Adjustment Panel-------*/
+
+.volu-adjustment-panel{
+    color: white;
+    right: calc(var(--paddings)*2 + var(--materaialpanel-size)) ;
+    bottom: calc(var(--playerpanel-height) + var(--paddings)*2);
+    width: 200pt;
+    height: 260pt;
+    border-radius: var(--border-radius);
+    background-color: var(--panels-backgroundcolor);
+    font-size: 11pt;
+}
+.volu-camera-panel{
+    color: white;
+    right: calc(var(--paddings)*2 + var(--materaialpanel-size)) ;
+    bottom: calc(var(--playerpanel-height) + var(--paddings)*2);
+    width: 200pt;
+    height: 260pt;
+    border-radius: var(--border-radius);
+    background-color: var(--panels-backgroundcolor);
+    font-size: 11pt;
+}
+
+
+.volu-adjustcamera-panelbutton{
+
+    right: var(--paddings);
+    width: var(--materaialpanel-size);
+    height: var(--adjustpanelbutton-size);
+    bottom: calc(var(--playerpanel-height) + var(--paddings)*2) ;
+    border-radius: var(--border-radius);
+    background-color: var(--panels-backgroundcolor);
+
+   /* --adjustpanelbutton-size: var(--materaialpanel-size);
+    --adjustpanelbutton-paddings: var(--materaialpanel-paddings);
+    --adjustpanelbutton-button-size: var(--materaialpanel-button-size);*/
+}
+.volu-btn-adjust{
+    left:var(--adjustpanelbutton-paddings);
+    background-image: url("../images/volucapplayer/icon-adjusments.png");
+}
+
+.volu-btn-camera{
+    left:var(--adjustpanelbutton-paddings);
+    top:calc(var(--adjustpanelbutton-button-size) + var(--adjustpanelbutton-paddings)*2);
+    background-image: url("../images/volucapplayer/btn_camera.png");
+}
+
+.volu_slider{
+    width: calc(100% - 30pt);
+    left: 15pt;
+    bottom: 0;
+}
+.volu_toggl{
+    width: calc(40pt);
+    left: 15pt;
+    bottom: 0;
+}
+.volu-checkbox-container-right{
+
+    bottom: -2pt;
+    right: 15pt;
+}
+
+.volu-checkbox-container-left{
+    bottom: -2pt;
+    left: 15pt;
+}
+
+.volu-checkbox-container-center{
+    bottom: -2pt;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.volu_slider_halfleft{
+    width: calc(50% - 27pt);
+    left: 15pt;
+    bottom: 0;
+}
+
+.volu_slider_75prc{
+    width: calc(75% - 30pt);
+    left: 15pt;
+    bottom: 0;
+}
+
+.volu_slider_halfright{
+    width: calc(50% - 27pt);
+    right: 15pt;
+    bottom: 0;
+}
+
+.volu-adjustment-panel p, .volu-camera-panel p{
+    position: absolute;
+
+}
+.volu-p-left{
+    left: 15pt;
+}
+
+.volu-p-right{
+    left: calc(50% + 13pt);
+}
+
+.volu-slidernlable{
+    width: 100%;
+    height: 37pt;
+    display: block;
+}
+/*==========POPUP WIN================*/
+.volu-popup-container{
+    width: 100%;
+    height: 100%;
+}
+
+.volu-popup-window{
+    width: 300pt;
+    max-width: 90%;
+    border-radius:  var(--border-radius);
+    background-color: var(--panels-backgroundcolor);
+    height: 200pt;
+    max-height: 90%;
+    padding: 10pt;
+    color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.volu-popup-share{
+    height: 350pt;
+}
+
+.popup-window-sharingtype{
+    height: 20pt;
+    width: 100%;
+}
+
+.popup-window-addsettings{
+    width: 100%;
+    height: 100pt;
+}
+.popup-window-addsettings div{
+    position: relative;
+}
+
+.popup-window-caption{
+    font-size: 18pt;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10pt;
+}
+
+.volu-textarea{
+    width: calc(100% - 10pt);
+    background: black;
+    color:white;
+    margin-top: 5pt;
+    height: 50%;
+    border: none;
+    border-radius:  var(--border-radius);
+    padding: 5pt;
+    margin-bottom: 10pt;
+}
+
+.popup-window-btn{
+    height: 15pt;
+    width: 100pt;
+    border-radius:  var(--border-radius);
+    background-color: var(--panels-backgroundcolor);
+    border-color: white;
+    border-width: 1pt;
+    border-style: groove;
+    text-align: center;
+    padding: 5pt;
+}
+
+
+/*===========GENERIC-------------*/
+
+@keyframes anim-volu-opacity {
+    from {opacity:1;}
+}
+
+.volu-message{
+    height: 20pt;
+    border-radius:  var(--border-radius);
+    background-color: var(--panels-backgroundcolor);
+    pointer-events: none;
+    color: white;
+    padding: 20pt;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity:0;
+}
+
+
+.volu-o_text {
+    color: var(--color-highlight);
+}
+
+
+

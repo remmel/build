@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Sync</title>
+</head>
+<body>
+
+
+<div id='imgs'>
+  <img id='img-d' src='#' />
+  <img id='img-rgb' src='#' />
+</div>
+
+
+<div class='rgb'>
+  RGB:<br />
+  <i class='prev'>❮</i><span class='num'></span><i class='next'>❯</i>
+</div>
+
+<div class='depth'>
+  Depth:<br />
+  <i class='prev'>❮</i><span class='num'></span><i class='next'>❯</i>
+</div>
+
+<div class='rgbd'>
+  Both:<br />
+  <i class='prev3'>❮❮❮</i><i class='prev2'>❮❮</i><i class='prev'>❮</i><span class='num'></span><i class='next'>❯</i><i class='next2'>❯❯</i><i class='next3'>❯❯❯</i>
+</div>
+
+
+</body>
+
+<style>
+  i{
+      font-style: normal;
+      padding: 5px 10px 5px 10px;
+      margin: 5px;
+      background-color: gray;
+      box-sizing: border-box;
+      display: inline-block;
+      cursor: pointer;
+      user-select: none;
+  }
+
+  img{
+      width: 720px;
+      height: 540px;
+      position: absolute;
+  }
+
+  #imgs{
+      position:relative;
+      width: 720px;
+      height: 540px;
+  }
+
+  #img-rgb{
+      opacity: 0.7;
+  }
+</style>
+
+<script>
+  var depth_num = rgb_num = 81
+  var folder = "dataset/vidaud/2021-09-08_203818_vert1m08"
+
+  function render() {
+    document.querySelector('.depth .num').textContent = depth_num
+    document.querySelector('.rgb .num').textContent = rgb_num
+
+    let depth_num_str = (depth_num+'').padStart(8, '0')
+    document.getElementById('img-d').src =  `${folder}/output/hue/${depth_num_str}_depthhue.png`
+    let rgb_num_str = (rgb_num+'').padStart(8, '0')
+    document.getElementById('img-rgb').src =  `${folder}/${rgb_num_str}_image.jpg`
+  }
+
+  document.querySelector('.depth .prev').onclick = () => {
+    depth_num--
+    render()
+  }
+
+  document.querySelector('.depth .next').onclick = () => {
+    depth_num++
+    render()
+  }
+
+  document.querySelector('.rgb .prev').onclick = e => {
+    rgb_num--
+    render()
+  }
+
+  document.querySelector('.rgb .next').onclick = () => {
+    rgb_num++
+    render()
+  }
+
+  document.querySelector('.rgbd .prev').onclick = e => {
+    rgb_num--
+    depth_num--
+    render()
+  }
+
+  document.querySelector('.rgbd .next').onclick = () => {
+    rgb_num++
+    depth_num++
+    render()
+  }
+
+  document.querySelector('.rgbd .prev2').onclick = e => {
+    rgb_num-=10
+    depth_num-=10
+    render()
+  }
+
+  document.querySelector('.rgbd .next2').onclick = () => {
+    rgb_num+=10
+    depth_num+=10
+    render()
+  }
+
+  document.querySelector('.rgbd .prev3').onclick = e => {
+    rgb_num-=100
+    depth_num-=100
+    render()
+  }
+
+  document.querySelector('.rgbd .next3').onclick = () => {
+    rgb_num+=100
+    depth_num+=100
+    render()
+  }
+
+  render()
+</script>
+</html>
