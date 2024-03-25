@@ -1,0 +1,21 @@
+{
+  "rotation": [
+    0,
+    0,
+    0
+  ],
+  "depthIntrinsics": {
+    "w": 1920,
+    "h": 1080,
+    "fovx": 83.2
+  },
+  "hueClipping": {
+    "near": 100,
+    "far": 1629
+  },
+  "position": [
+    0,
+    0,
+    0
+  ]
+}

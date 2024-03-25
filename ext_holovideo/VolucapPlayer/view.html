@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volucap-VideoPlayer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nouislider.css">
+    <link rel="stylesheet" href="css/voluPlayer.css">
+
+
+    <script src="js/libs/three.min.js"></script>
+
+    <script src="js/libs/EffectComposer.js"></script>
+    <script src="js/libs/CopyShader.js"></script>
+    <script src="js/libs/BokehShader.js"></script>
+    <script src="js/libs/ShaderPass.js"></script>
+    <script src="js/libs/RenderPass.js"></script>
+    <script src="js/libs/BokehPass.js"></script>
+
+
+    <script src="js/libs/RGBELoader.js"></script>
+    <script src="js/libs/GLTFLoader.js"></script>
+
+
+    <script src="js/libs/OrbitControls.js"></script>
+
+    <script src="js/VolucapPlayerSettings.js"></script>
+    <script src="js/holovideoobject.js"></script>
+    <script src="js/HoloPlayerWrapper.js"></script>
+    <script src="js/VideoControls.js"></script>
+
+    <script src="js/MaterialsPanelController.js"></script>
+
+    <script src="js/EnviromentPanelController.js"></script>
+    <script src="js/libs/nouislider.js"></script>
+    <script src="js/VolucapPlayer.js"></script>
+
+
+    <!--<script src="js/testFrame.js"></script>--->
+
+
+</head>
+<body>
+
+<div id = "v-player" class="voluplayer-container full-size"></div>
+
+<script>
+    volucapPlayer = new VolucapPlayer(document.querySelector("#v-player"),{
+        path:"/dataset/vv/hcap/T003_ThomasScenic_v3/t003_thomasscenic_v3.hcap",
+        ignoreUrlParams: false,
+
+        //shareButton: false,
+        //openButton: false,
+        //hideTimeline: true,
+        //showLogo: false,
+        //showSettingsPanel: true,
+        //hideControlBg: true ,
+    });
+</script>
+</body>
+</html>
