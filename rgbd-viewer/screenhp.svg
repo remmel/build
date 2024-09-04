@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="640"
+   height="360"
+   viewBox="0 0 169.33333 95.250006"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
+   sodipodi:docname="screenhp.svg"
+   inkscape:export-filename="/home/remmel/workspace/image-processing-js/dist/rgbd-viewer/screenhp.png"
+   inkscape:export-xdpi="49.508476"
+   inkscape:export-ydpi="49.508476"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.1224747"
+     inkscape:cx="309.58382"
+     inkscape:cy="231.63106"
+     inkscape:window-width="1600"
+     inkscape:window-height="839"
+     inkscape:window-x="0"
+     inkscape:window-y="180"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     units="px" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#ffffff;stroke:#0000ff;stroke-width:0"
+       id="rect849"
+       width="169.33333"
+       height="95.25"
+       x="6.5569816e-07"
+       y="6.5569816e-07" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.1535px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.075959"
+       x="88.620323"
+       y="45.130943"
+       id="text1858"><tspan
+         sodipodi:role="line"
+         style="font-size:12.1535px;text-align:center;text-anchor:middle;stroke-width:0.075959"
+         x="88.620323"
+         y="45.130943"
+         id="tspan1860">svg image</tspan></text>
+    <ellipse
+       style="opacity:0.5;fill:#ff6400;stroke:#0000ff;stroke-width:0"
+       id="path933"
+       cx="42.766041"
+       cy="28.245661"
+       rx="11.251898"
+       ry="10.499567" />
+    <ellipse
+       style="opacity:0.5;fill:#ff6400;stroke:#0000ff;stroke-width:0"
+       id="path935"
+       cx="144.64191"
+       cy="27.098139"
+       rx="12.461918"
+       ry="6.194232" />
+    <ellipse
+       style="opacity:0.5;fill:#ff6400;stroke:#0000ff;stroke-width:0"
+       id="path937"
+       cx="63.159809"
+       cy="79.955315"
+       rx="59.303509"
+       ry="7.7592287"
+       inkscape:export-filename="/home/remmel/workspace/image-processing-js/dist/rgbd-viewer/screenhp.png"
+       inkscape:export-xdpi="49.508476"
+       inkscape:export-ydpi="49.508476" />
+  </g>
+</svg>
